@@ -1,13 +1,15 @@
 Summary:	USB Manager
 Summary(pl):	Zarz±dca urz±dzeñ USB
 Name:		usbmgr
-Version:	0.4.8
+Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	02f699e706c6382ae632c7400804af81
+# Source0-md5:	070c75f83f2bc84750a87fa685a89031
 URL:		http://www.dotaster.com/~shuu/linux/usbmgr/
+BuildRequires:	autoconf
+BuildRequires:	automake
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbin	/sbin
@@ -26,7 +28,9 @@ USB.
 %setup -q
 
 %build
-%configure2_13
+%{__aclocal}
+%{__autoconf}
+%configure
 
 %{__make} \
 	OPT="%{rpmcflags}"
