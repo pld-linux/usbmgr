@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{name}-%{version}.tar.gz
+# Source0-md5:	8dc560f79b33c1577cfcf7d1b67122e9
 #development:	http://www.dotaster.com/~shuu/linux/usbmgr/0.4.8/usbmgr-0.4.8.tar.gz
 URL:		http://www.dotaster.com/~shuu/linux/usbmgr/
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
