@@ -1,13 +1,12 @@
 Summary:	USB Manager
 Summary(pl):	Zarz±dca urz±dzeñ USB
 Name:		usbmgr
-Version:	0.1.2
+Version:	0.4.8
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{name}-%{version}.tar.gz
-# Source0-md5:	8dc560f79b33c1577cfcf7d1b67122e9
-#development:	http://www.dotaster.com/~shuu/linux/usbmgr/0.4.8/usbmgr-0.4.8.tar.gz
+Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	02f699e706c6382ae632c7400804af81
 URL:		http://www.dotaster.com/~shuu/linux/usbmgr/
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,13 +26,17 @@ USB.
 %setup -q
 
 %build
-#./configure --prefix=%{_prefix}
-CC="%{__cc}" %{__make} OPT="%{rpmcflags}"
+%configure2_13
+
+%{__make} \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sysconfdir}/usb,%{_sbindir}}
-%{__make} CONF_DIR=$RPM_BUILD_ROOT%{_sysconfdir}/usb BIN_DIR=$RPM_BUILD_ROOT%{_sbindir} install
+
+%{__make} install \
+	sbindir=$RPM_BUILD_ROOT%{_sbindir} \
+	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +44,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README TODO
-%attr(640,root,root) %{_sysconfdir}/usb/*
-%attr(755,root,root) %{_sbindir}/usbmgr
+%lang(ja) %doc README.eucJP
+%dir %{_sysconfdir}/usbmgr
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/usbmgr/usbmgr.conf
+%attr(755,root,root) %{_sysconfdir}/usbmgr/network
 %attr(755,root,root) %{_sbindir}/dump_usbdev
+%attr(755,root,root) %{_sbindir}/update_usbdb
+%attr(755,root,root) %{_sbindir}/usbmgr
