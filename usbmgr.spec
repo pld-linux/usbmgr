@@ -5,8 +5,6 @@ Version:	0.1.2
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/%{name}-%{version}.tar.gz
 #development:	http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/0.4.8/usbmgr-0.4.8.tar.gz
 URL:		http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/
