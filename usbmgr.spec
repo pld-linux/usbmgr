@@ -33,7 +33,7 @@ CC=gcc make OPT="$RPM_OPT_FLAGS"
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir}/usb,%{_sbin}}
-make CONF_DIR=$RPM_BUILD_ROOT%{_sysconfdir}/usb BIN_DIR=$RPM_BUILD_ROOT%{_sbin} install
+%{__make} CONF_DIR=$RPM_BUILD_ROOT%{_sysconfdir}/usb BIN_DIR=$RPM_BUILD_ROOT%{_sbin} install
 
 gzip -9nf CHANGES README TODO
 
