@@ -3,14 +3,14 @@ Summary(pl):	Menad¿er urz±dzeñ USB
 Name:		usbmgr
 Version:	0.1.2
 Release:	1
-Copyright:	GPL
-Group:		System
-Group(pl):	System
+License:	GPL
+Group:		Utilities/System
+Group(pl):	Narzêdzia/System
 Source0:	%name-%version.tar.gz
-#Patch0:		
+#Patch0:	
 #BuildRequires:	
 #Requires:	
-Buildroot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr
 %define	_sbin	/sbin
