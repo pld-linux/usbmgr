@@ -5,9 +5,9 @@ Version:	0.1.2
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/%{name}-%{version}.tar.gz
-#development:	http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/0.4.8/usbmgr-0.4.8.tar.gz
-URL:		http://www.wondernetworkresources.com/staff/shuu/linux/usbmgr/
+Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{name}-%{version}.tar.gz
+#development:	http://www.dotaster.com/~shuu/linux/usbmgr/0.4.8/usbmgr-0.4.8.tar.gz
+URL:		http://www.dotaster.com/~shuu/linux/usbmgr/
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbin	/sbin
@@ -24,8 +24,6 @@ USB.
 
 %prep
 %setup -q
-
-#%patch
 
 %build
 #./configure --prefix=%{_prefix}
