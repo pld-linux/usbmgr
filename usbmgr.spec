@@ -4,22 +4,21 @@ Name:		usbmgr
 Version:	0.1.2
 Release:	1
 License:	GPL
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
-Source0:	%name-%version.tar.gz
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
+Source0:	%{name}-%{version}.tar.gz
 #Patch0:	
 #BuildRequires:	
 #Requires:	
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr
-%define	_sbin	/sbin
+%define		_sbin	/sbin
 
 %description
 Applications/Communications
 
 %description -l pl
-
 
 %prep
 %setup -q
@@ -28,7 +27,7 @@ Applications/Communications
 
 %build
 #./configure --prefix=%{_prefix}
-CC=gcc make OPT="$RPM_OPT_FLAGS"
+CC="%{__cc}" make OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
