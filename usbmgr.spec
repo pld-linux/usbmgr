@@ -10,7 +10,7 @@ Source0:	http://www.dotaster.com/~shuu/linux/usbmgr/%{version}/%{name}-%{version
 URL:		http://www.dotaster.com/~shuu/linux/usbmgr/
 BuildRequires:	autoconf
 BuildRequires:	automake
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbin	/sbin
 
