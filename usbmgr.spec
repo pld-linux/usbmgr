@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README TODO
 %lang(ja) %doc README.eucJP
 %dir %{_sysconfdir}/usbmgr
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/usbmgr/usbmgr.conf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/usbmgr/usbmgr.conf
 %attr(755,root,root) %{_sysconfdir}/usbmgr/network
 %attr(755,root,root) %{_sbindir}/dump_usbdev
 %attr(755,root,root) %{_sbindir}/update_usbdb
