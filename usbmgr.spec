@@ -1,5 +1,5 @@
 Summary:	USB Manager
-Summary(pl):	Zarz±dca urz±dzeñ USB
+Summary(pl.UTF-8):   ZarzÄ…dca urzÄ…dzeÅ„ USB
 Name:		usbmgr
 Version:	1.0.0
 Release:	1
@@ -19,9 +19,9 @@ The usbmgr is user-mode daemon which loads and unloads some kernel
 modules according to the configuration and executes some scripts to
 setup USB devices.
 
-%description -l pl
-usbmgr jest demonem ³aduj±cym i usuwaj±cym modu³y j±dra w zale¿no¶ci
-od konfiguracji oraz uruchamiaj±cy skrypty konfiguruj±ce urz±dzenia
+%description -l pl.UTF-8
+usbmgr jest demonem Å‚adujÄ…cym i usuwajÄ…cym moduÅ‚y jÄ…dra w zaleÅ¼noÅ›ci
+od konfiguracji oraz uruchamiajÄ…cy skrypty konfigurujÄ…ce urzÄ…dzenia
 USB.
 
 %prep
