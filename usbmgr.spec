@@ -1,5 +1,5 @@
 Summary:	USB Manager
-Summary(pl.UTF-8):   Zarządca urządzeń USB
+Summary(pl.UTF-8):	Zarządca urządzeń USB
 Name:		usbmgr
 Version:	1.0.0
 Release:	1
